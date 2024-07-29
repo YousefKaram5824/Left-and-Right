@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="moon.png">
+    <title>Left and Right</title>
+</head>
+
+<body>
+    <h1>All my moons 🌚</h1>
+    <div class="box">
+        <div class="item"><img src="yoya7.jpg"></div>
+        <div class="item"><img src="yoya4.jpg"></div>
+        <div class="item"><img src="yoya3.jpg"></div>
+        <div class="item"><img src="yoya5.jpg"></div>
+        <div class="item"><img src="yoya6.jpg"></div>
+        <div class="item"><img src="yoya2.png"></div>
+        <div class="item"><img src="yoya1.jpg"></div>
+    </div>
+    <div class="buttons">
+        <span class="perv"></span>
+        <span class="next"></span>
+    </div>
+    <a href="https://yousefkaram5824.github.io/Hover/" style="--clr: #ffeb3b"><span>Click Me</span><i></i></a>
+    <script>
+        let perv = document.querySelector('.perv');
+        let next = document.querySelector('.next');
+
+        next.addEventListener('click', function () {
+            let item = document.querySelectorAll('.item');
+            document.querySelector('.box').appendChild(item[0]);
+        })
+
+        perv.addEventListener('click', function () {
+            let item = document.querySelectorAll('.item');
+            document.querySelector('.box').prepend(item[item.length - 1]);
+        })
+    </script>
+</body>
+
+</html>
